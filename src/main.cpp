@@ -5,11 +5,25 @@
 
 int main(int argc, char* argv[]) {
 
+	if (argc != 3) {
+		std::cout << "Invalid arguments\n";
+		return 1;
+	}
+
 	File file1(argv[1]);
 	File file2(argv[2]);
 
 	file1.open();
 	file2.open();
+
+	if (!file1.isOpen) {
+		std::cout << "Can't open file:" << argv[1] << std::endl;
+		return 2;
+	}
+	if (!file2.isOpen) {
+		std::cout << "Can't open file:" << argv[2] << std::endl;
+		return 3;
+	}
 
 	unsigned int len;
 	if (file1.len < file2.len) {

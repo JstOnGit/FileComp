@@ -13,8 +13,12 @@ void File::open() {
 		while (fin.good()) {
 			file.push_back(fin.get());
 		}
+		fin.close();
+		len = file.size();
+		isOpen = true;
 	}
-	fin.close();
-	len = file.size();
+	else {
+		isOpen = false;
+	}
 }
 

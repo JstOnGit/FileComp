@@ -5,6 +5,7 @@
 
 class File {
 public:
+	bool isOpen;
 	std::string m_filePath;
 	std::vector<char> file;
 
