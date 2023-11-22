@@ -23,7 +23,13 @@ $ ./FileComp ~/bin/file1.bin ~/bin/file2.bin
 $ git clone https://github.com/JstOnGit/FileComp.git
 ````
 
-2. Run the make command.
+2. Go into the directory that is downloaded.
+
+````
+$ cd FileComp
+````
+
+3. Run the make command.
 
 ````
 $ make
